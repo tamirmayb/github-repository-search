@@ -19,9 +19,7 @@
         <java.version>17</java.version>
         <start-class>com.github.GithubRepositoryFetcherApp</start-class>
         <springdoc-openapi.version>1.6.15</springdoc-openapi.version>
-        <modelmapper.version>3.1.1</modelmapper.version>
         <maven.jacoco.version>0.8.7</maven.jacoco.version>
-        <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
     </properties>
 
     <dependencies>
@@ -59,19 +57,6 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>${springdoc-openapi.version}</version>
-        </dependency>
-
-        <!-- modelmapper -->
-        <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>${modelmapper.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
-            <version>${org.mapstruct.version}</version>
         </dependency>
 
     </dependencies>

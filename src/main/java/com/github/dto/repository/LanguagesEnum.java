@@ -5,8 +5,6 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import java.util.Arrays;
-
 @Getter
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum LanguagesEnum {
@@ -15,16 +13,10 @@ public enum LanguagesEnum {
     JAVA_SCRIPT("javascript"),
     PYTHON("python"),
     PHP("php"),
+    ASSEMBLY("assembly"),
+    GO("go"),
     C("c");
 
     @NonNull
     private final String name;
-
-    public static LanguagesEnum getByString(String languageStr) {
-        return Arrays.stream(values())
-                .filter(enumLanguage -> enumLanguage.getName()
-                        .equalsIgnoreCase(languageStr))
-                .findFirst()
-                .orElse(null);
-    }
 }

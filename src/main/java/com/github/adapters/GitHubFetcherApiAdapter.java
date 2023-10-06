@@ -1,6 +1,5 @@
 package com.github.adapters;
 
-import com.github.dto.repository.LanguagesEnum;
 import com.github.dto.rest.SearchResultDTO;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -27,10 +26,9 @@ public class GitHubFetcherApiAdapter {
         this.restTemplate = restTemplate;
     }
 
-    public SearchResultDTO searchRepositories(LanguagesEnum language) {
-        log.info("[GitHubFetcherApiAdapter] is fetching GET " + searchURL + "/repositories?q=language:" + language.getName()
-                + "&sort=stars&per_page=10");
-        return restTemplate.getForObject(searchURL + "created:2019-01-10&sort=stars&order=desc", SearchResultDTO.class);
+    public SearchResultDTO searchRepositories(String query) {
+        log.info("[GitHubFetcherApiAdapter] is fetching GET " + searchURL + query);
+        return restTemplate.getForObject(searchURL + query, SearchResultDTO.class);
     }
 
     @Bean
