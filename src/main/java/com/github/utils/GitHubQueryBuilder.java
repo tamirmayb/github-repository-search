@@ -10,6 +10,14 @@ public class GitHubQueryBuilder {
     private static final String PER_PAGE = "&per_page=";
     private static final String SORT_AND_ORDER_BY_STARS_DESC = "&sort=stars&order=desc";
 
+    /**
+     * Builds a string query for repository search.
+     * At least from or language should be provided or the process will fail
+     * @param limit - limits the results
+     * @param from - creation date parameter
+     * @param language - language date parameter
+     * @return - query string
+     */
     public static String buildSearchRepositoriesQuery(Long limit, String from, String language) {
         StringBuilder stringBuilder = new StringBuilder();
         boolean queryValid = false;
