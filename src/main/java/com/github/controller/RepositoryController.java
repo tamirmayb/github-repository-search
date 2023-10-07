@@ -1,7 +1,7 @@
 package com.github.controller;
 
 import com.github.dto.rest.SearchResultDTO;
-import com.github.service.GitHubRepoFetcherService;
+import com.github.service.SearchGitHubReposService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -23,7 +23,7 @@ import java.util.List;
 @Slf4j
 public class RepositoryController {
 
-    private final GitHubRepoFetcherService repositoriesService;
+    private final SearchGitHubReposService repositoriesService;
 
     @Operation(summary = "Gets a list of repositories with optional filters")
     @ApiResponses(value = {

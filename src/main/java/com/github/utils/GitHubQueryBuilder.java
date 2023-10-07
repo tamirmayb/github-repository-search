@@ -1,6 +1,6 @@
 package com.github.utils;
 
-import com.github.exception.CustomInvalidQueryException;
+import com.github.exceptions.CustomInvalidQueryException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

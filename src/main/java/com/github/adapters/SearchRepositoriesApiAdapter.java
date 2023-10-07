@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Slf4j
 @Component
-public class GitHubFetcherApiAdapter {
+public class SearchRepositoriesApiAdapter {
 
     @Getter(AccessLevel.PACKAGE)
     private final RestTemplate restTemplate;
@@ -22,7 +22,7 @@ public class GitHubFetcherApiAdapter {
     private String searchURL;
 
 
-    public GitHubFetcherApiAdapter(@Lazy RestTemplate restTemplate) {
+    public SearchRepositoriesApiAdapter(@Lazy RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
